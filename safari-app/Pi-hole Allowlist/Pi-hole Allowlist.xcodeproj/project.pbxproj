@@ -1,0 +1,637 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 77;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		32351B6B2F89005E00490022 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32351B6A2F89005E00490022 /* AppDelegate.swift */; };
+		32351B6F2F89005E00490022 /* Main.html in Resources */ = {isa = PBXBuildFile; fileRef = 32351B6D2F89005E00490022 /* Main.html */; };
+		32351B712F89005E00490022 /* Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 32351B702F89005E00490022 /* Icon.png */; };
+		32351B732F89005E00490022 /* Style.css in Resources */ = {isa = PBXBuildFile; fileRef = 32351B722F89005E00490022 /* Style.css */; };
+		32351B752F89005E00490022 /* Script.js in Resources */ = {isa = PBXBuildFile; fileRef = 32351B742F89005E00490022 /* Script.js */; };
+		32351B772F89005E00490022 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32351B762F89005E00490022 /* ViewController.swift */; };
+		32351B7A2F89005E00490022 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 32351B782F89005E00490022 /* Main.storyboard */; };
+		32351B7C2F89006000490022 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 32351B7B2F89006000490022 /* Assets.xcassets */; };
+		32351B832F89006000490022 /* Pi-hole Allowlist Extension.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = 32351B822F89006000490022 /* Pi-hole Allowlist Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		32351B882F89006000490022 /* SafariWebExtensionHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32351B872F89006000490022 /* SafariWebExtensionHandler.swift */; };
+		32351B9C2F89006100490022 /* popup.js in Resources */ = {isa = PBXBuildFile; fileRef = 32351B942F89006100490022 /* popup.js */; };
+		32351B9D2F89006100490022 /* popup.html in Resources */ = {isa = PBXBuildFile; fileRef = 32351B952F89006100490022 /* popup.html */; };
+		32351B9E2F89006100490022 /* options.js in Resources */ = {isa = PBXBuildFile; fileRef = 32351B962F89006100490022 /* options.js */; };
+		32351B9F2F89006100490022 /* manifest.json in Resources */ = {isa = PBXBuildFile; fileRef = 32351B972F89006100490022 /* manifest.json */; };
+		32351BA02F89006100490022 /* lib in Resources */ = {isa = PBXBuildFile; fileRef = 32351B982F89006100490022 /* lib */; };
+		32351BA12F89006100490022 /* options.html in Resources */ = {isa = PBXBuildFile; fileRef = 32351B992F89006100490022 /* options.html */; };
+		32351BA22F89006100490022 /* popup.css in Resources */ = {isa = PBXBuildFile; fileRef = 32351B9A2F89006100490022 /* popup.css */; };
+		32351BA32F89006100490022 /* options.css in Resources */ = {isa = PBXBuildFile; fileRef = 32351B9B2F89006100490022 /* options.css */; };
+		E7F8A9B12F89006200490022 /* icons in Resources */ = {isa = PBXBuildFile; fileRef = E7F8A9B02F89006200490022 /* icons */; };
+		F1E2D3C52F89006400490022 /* AppIcon.icns in Resources */ = {isa = PBXBuildFile; fileRef = F1E2D3C42F89006400490022 /* AppIcon.icns */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		32351B842F89006000490022 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 32351B5F2F89005E00490022 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 32351B812F89006000490022;
+			remoteInfo = "Pi-hole Allowlist Extension";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		32351B8F2F89006000490022 /* Embed Foundation Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				32351B832F89006000490022 /* Pi-hole Allowlist Extension.appex in Embed Foundation Extensions */,
+			);
+			name = "Embed Foundation Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		32351B672F89005E00490022 /* Pi-hole Allowlist.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Pi-hole Allowlist.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		32351B6A2F89005E00490022 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		32351B6E2F89005E00490022 /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.html; name = Base; path = Base.lproj/Main.html; sourceTree = "<group>"; };
+		32351B702F89005E00490022 /* Icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Icon.png; sourceTree = "<group>"; };
+		32351B722F89005E00490022 /* Style.css */ = {isa = PBXFileReference; lastKnownFileType = text.css; path = Style.css; sourceTree = "<group>"; };
+		32351B742F89005E00490022 /* Script.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; path = Script.js; sourceTree = "<group>"; };
+		32351B762F89005E00490022 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		32351B792F89005E00490022 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		32351B7B2F89006000490022 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		32351B7D2F89006000490022 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		32351B822F89006000490022 /* Pi-hole Allowlist Extension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "Pi-hole Allowlist Extension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
+		32351B872F89006000490022 /* SafariWebExtensionHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SafariWebExtensionHandler.swift; sourceTree = "<group>"; };
+		32351B892F89006000490022 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		32351B942F89006100490022 /* popup.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; name = popup.js; path = Resources/popup.js; sourceTree = "<group>"; };
+		32351B952F89006100490022 /* popup.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; name = popup.html; path = Resources/popup.html; sourceTree = "<group>"; };
+		32351B962F89006100490022 /* options.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; name = options.js; path = Resources/options.js; sourceTree = "<group>"; };
+		32351B972F89006100490022 /* manifest.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; name = manifest.json; path = Resources/manifest.json; sourceTree = "<group>"; };
+		32351B982F89006100490022 /* lib */ = {isa = PBXFileReference; lastKnownFileType = folder; name = lib; path = Resources/lib; sourceTree = "<group>"; };
+		32351B992F89006100490022 /* options.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; name = options.html; path = Resources/options.html; sourceTree = "<group>"; };
+		32351B9A2F89006100490022 /* popup.css */ = {isa = PBXFileReference; lastKnownFileType = text.css; name = popup.css; path = Resources/popup.css; sourceTree = "<group>"; };
+		32351B9B2F89006100490022 /* options.css */ = {isa = PBXFileReference; lastKnownFileType = text.css; name = options.css; path = Resources/options.css; sourceTree = "<group>"; };
+		E7F8A9B02F89006200490022 /* icons */ = {isa = PBXFileReference; lastKnownFileType = folder; name = icons; path = Resources/icons; sourceTree = "<group>"; };
+		F1E2D3C42F89006400490022 /* AppIcon.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; path = AppIcon.icns; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		32351B642F89005E00490022 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		32351B7F2F89006000490022 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		32351B5E2F89005E00490022 = {
+			isa = PBXGroup;
+			children = (
+				32351B692F89005E00490022 /* Pi-hole Allowlist */,
+				32351B862F89006000490022 /* Pi-hole Allowlist Extension */,
+				32351B682F89005E00490022 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		32351B682F89005E00490022 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				32351B672F89005E00490022 /* Pi-hole Allowlist.app */,
+				32351B822F89006000490022 /* Pi-hole Allowlist Extension.appex */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		32351B692F89005E00490022 /* Pi-hole Allowlist */ = {
+			isa = PBXGroup;
+			children = (
+				32351B6A2F89005E00490022 /* AppDelegate.swift */,
+				32351B762F89005E00490022 /* ViewController.swift */,
+				32351B782F89005E00490022 /* Main.storyboard */,
+				32351B7B2F89006000490022 /* Assets.xcassets */,
+				32351B7D2F89006000490022 /* Info.plist */,
+				32351B6C2F89005E00490022 /* Resources */,
+			);
+			path = "Pi-hole Allowlist";
+			sourceTree = "<group>";
+		};
+		32351B6C2F89005E00490022 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				32351B6D2F89005E00490022 /* Main.html */,
+				F1E2D3C42F89006400490022 /* AppIcon.icns */,
+				32351B702F89005E00490022 /* Icon.png */,
+				32351B722F89005E00490022 /* Style.css */,
+				32351B742F89005E00490022 /* Script.js */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		32351B862F89006000490022 /* Pi-hole Allowlist Extension */ = {
+			isa = PBXGroup;
+			children = (
+				32351B932F89006100490022 /* Resources */,
+				32351B872F89006000490022 /* SafariWebExtensionHandler.swift */,
+				32351B892F89006000490022 /* Info.plist */,
+			);
+			path = "Pi-hole Allowlist Extension";
+			sourceTree = "<group>";
+		};
+		32351B932F89006100490022 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				32351B942F89006100490022 /* popup.js */,
+				32351B952F89006100490022 /* popup.html */,
+				32351B962F89006100490022 /* options.js */,
+				32351B972F89006100490022 /* manifest.json */,
+				32351B982F89006100490022 /* lib */,
+				E7F8A9B02F89006200490022 /* icons */,
+				32351B992F89006100490022 /* options.html */,
+				32351B9A2F89006100490022 /* popup.css */,
+				32351B9B2F89006100490022 /* options.css */,
+			);
+			name = Resources;
+			path = "Pi-hole Allowlist Extension";
+			sourceTree = SOURCE_ROOT;
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		32351B662F89005E00490022 /* Pi-hole Allowlist */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 32351B902F89006000490022 /* Build configuration list for PBXNativeTarget "Pi-hole Allowlist" */;
+			buildPhases = (
+				32351B632F89005E00490022 /* Sources */,
+				32351B642F89005E00490022 /* Frameworks */,
+				32351B652F89005E00490022 /* Resources */,
+				32351B8F2F89006000490022 /* Embed Foundation Extensions */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				32351B852F89006000490022 /* PBXTargetDependency */,
+			);
+			name = "Pi-hole Allowlist";
+			packageProductDependencies = (
+			);
+			productName = "Pi-hole Allowlist";
+			productReference = 32351B672F89005E00490022 /* Pi-hole Allowlist.app */;
+			productType = "com.apple.product-type.application";
+		};
+		32351B812F89006000490022 /* Pi-hole Allowlist Extension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 32351B8C2F89006000490022 /* Build configuration list for PBXNativeTarget "Pi-hole Allowlist Extension" */;
+			buildPhases = (
+				32351B7E2F89006000490022 /* Sources */,
+				32351B7F2F89006000490022 /* Frameworks */,
+				32351B802F89006000490022 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Pi-hole Allowlist Extension";
+			packageProductDependencies = (
+			);
+			productName = "Pi-hole Allowlist Extension";
+			productReference = 32351B822F89006000490022 /* Pi-hole Allowlist Extension.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		32351B5F2F89005E00490022 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 2630;
+				LastUpgradeCheck = 2630;
+				TargetAttributes = {
+					32351B662F89005E00490022 = {
+						CreatedOnToolsVersion = 26.3;
+					};
+					32351B812F89006000490022 = {
+						CreatedOnToolsVersion = 26.3;
+					};
+				};
+			};
+			buildConfigurationList = 32351B622F89005E00490022 /* Build configuration list for PBXProject "Pi-hole Allowlist" */;
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 32351B5E2F89005E00490022;
+			minimizedProjectReferenceProxies = 1;
+			preferredProjectObjectVersion = 77;
+			productRefGroup = 32351B682F89005E00490022 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				32351B662F89005E00490022 /* Pi-hole Allowlist */,
+				32351B812F89006000490022 /* Pi-hole Allowlist Extension */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		32351B652F89005E00490022 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F1E2D3C52F89006400490022 /* AppIcon.icns in Resources */,
+				32351B712F89005E00490022 /* Icon.png in Resources */,
+				32351B7A2F89005E00490022 /* Main.storyboard in Resources */,
+				32351B752F89005E00490022 /* Script.js in Resources */,
+				32351B6F2F89005E00490022 /* Main.html in Resources */,
+				32351B7C2F89006000490022 /* Assets.xcassets in Resources */,
+				32351B732F89005E00490022 /* Style.css in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		32351B802F89006000490022 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				32351B9F2F89006100490022 /* manifest.json in Resources */,
+				32351BA22F89006100490022 /* popup.css in Resources */,
+				32351BA02F89006100490022 /* lib in Resources */,
+				E7F8A9B12F89006200490022 /* icons in Resources */,
+				32351B9C2F89006100490022 /* popup.js in Resources */,
+				32351B9E2F89006100490022 /* options.js in Resources */,
+				32351B9D2F89006100490022 /* popup.html in Resources */,
+				32351BA32F89006100490022 /* options.css in Resources */,
+				32351BA12F89006100490022 /* options.html in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		32351B632F89005E00490022 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				32351B772F89005E00490022 /* ViewController.swift in Sources */,
+				32351B6B2F89005E00490022 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		32351B7E2F89006000490022 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				32351B882F89006000490022 /* SafariWebExtensionHandler.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		32351B852F89006000490022 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 32351B812F89006000490022 /* Pi-hole Allowlist Extension */;
+			targetProxy = 32351B842F89006000490022 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		32351B6D2F89005E00490022 /* Main.html */ = {
+			isa = PBXVariantGroup;
+			children = (
+				32351B6E2F89005E00490022 /* Base */,
+			);
+			name = Main.html;
+			sourceTree = "<group>";
+		};
+		32351B782F89005E00490022 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				32351B792F89005E00490022 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		32351B8A2F89006000490022 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MACOSX_DEPLOYMENT_TARGET = 15.7;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		32351B8B2F89006000490022 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MACOSX_DEPLOYMENT_TARGET = 15.7;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = macosx;
+				SWIFT_COMPILATION_MODE = wholemodule;
+			};
+			name = Release;
+		};
+		32351B8D2F89006000490022 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = X5824JU6GR;
+				ENABLE_APP_SANDBOX = YES;
+				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_USER_SELECTED_FILES = readonly;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "Pi-hole Allowlist Extension/Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = "Pi-hole Allowlist Extension";
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@executable_path/../../../../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.14;
+				MARKETING_VERSION = 1.0;
+				OTHER_LDFLAGS = (
+					"-framework",
+					SafariServices,
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "nl.polleke.Pi-hole-Allowlist.Extension";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		32351B8E2F89006000490022 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = X5824JU6GR;
+				ENABLE_APP_SANDBOX = YES;
+				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_USER_SELECTED_FILES = readonly;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "Pi-hole Allowlist Extension/Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = "Pi-hole Allowlist Extension";
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@executable_path/../../../../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.14;
+				MARKETING_VERSION = 1.0;
+				OTHER_LDFLAGS = (
+					"-framework",
+					SafariServices,
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "nl.polleke.Pi-hole-Allowlist.Extension";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+		32351B912F89006000490022 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = X5824JU6GR;
+				ENABLE_APP_SANDBOX = YES;
+				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_OUTGOING_NETWORK_CONNECTIONS = YES;
+				ENABLE_USER_SELECTED_FILES = readonly;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "Pi-hole Allowlist/Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = "Pi-hole Allowlist";
+				INFOPLIST_KEY_CFBundleIconFile = AppIcon;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				INFOPLIST_KEY_NSMainStoryboardFile = Main;
+				INFOPLIST_KEY_NSPrincipalClass = NSApplication;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				OTHER_LDFLAGS = (
+					"-framework",
+					SafariServices,
+					"-framework",
+					WebKit,
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "nl.polleke.Pi-hole-Allowlist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				REGISTER_APP_GROUPS = YES;
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_DEFAULT_ACTOR_ISOLATION = MainActor;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		32351B922F89006000490022 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = X5824JU6GR;
+				ENABLE_APP_SANDBOX = YES;
+				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_OUTGOING_NETWORK_CONNECTIONS = YES;
+				ENABLE_USER_SELECTED_FILES = readonly;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "Pi-hole Allowlist/Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = "Pi-hole Allowlist";
+				INFOPLIST_KEY_CFBundleIconFile = AppIcon;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				INFOPLIST_KEY_NSMainStoryboardFile = Main;
+				INFOPLIST_KEY_NSPrincipalClass = NSApplication;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				OTHER_LDFLAGS = (
+					"-framework",
+					SafariServices,
+					"-framework",
+					WebKit,
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "nl.polleke.Pi-hole-Allowlist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				REGISTER_APP_GROUPS = YES;
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_DEFAULT_ACTOR_ISOLATION = MainActor;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		32351B622F89005E00490022 /* Build configuration list for PBXProject "Pi-hole Allowlist" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				32351B8A2F89006000490022 /* Debug */,
+				32351B8B2F89006000490022 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		32351B8C2F89006000490022 /* Build configuration list for PBXNativeTarget "Pi-hole Allowlist Extension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				32351B8D2F89006000490022 /* Debug */,
+				32351B8E2F89006000490022 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		32351B902F89006000490022 /* Build configuration list for PBXNativeTarget "Pi-hole Allowlist" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				32351B912F89006000490022 /* Debug */,
+				32351B922F89006000490022 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 32351B5F2F89005E00490022 /* Project object */;
+}

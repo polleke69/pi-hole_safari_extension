@@ -1,0 +1,73 @@
+:root {
+  color-scheme: light dark;
+  font-family: system-ui, -apple-system, "Segoe UI", sans-serif;
+  line-height: 1.45;
+  max-width: 640px;
+  margin: 2rem auto;
+  padding: 0 1.25rem;
+}
+
+h1 {
+  font-size: 1.35rem;
+  margin-top: 0;
+}
+
+.lead {
+  margin-top: 0;
+  opacity: 0.9;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+label {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+  font-weight: 600;
+}
+
+input {
+  padding: 0.5rem 0.6rem;
+  border-radius: 6px;
+  border: 1px solid color-mix(in srgb, CanvasText 22%, transparent);
+  background: Canvas;
+  color: CanvasText;
+  font: inherit;
+}
+
+.hint {
+  margin: 0;
+  font-size: 0.92rem;
+  opacity: 0.88;
+}
+
+.row {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+button.primary {
+  padding: 0.55rem 1rem;
+  border-radius: 6px;
+  border: 1px solid color-mix(in srgb, Highlight 40%, transparent);
+  background: color-mix(in srgb, Highlight 18%, Canvas);
+  color: CanvasText;
+  font: inherit;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.saved {
+  font-size: 0.92rem;
+  opacity: 0;
+ transition: opacity 0.2s ease;
+}
+
+.saved.show {
+  opacity: 1;
+}

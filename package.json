@@ -1,0 +1,13 @@
+{
+  "name": "pi-hole-safari-allowlist",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "test": "vitest run",
+    "sync:safari": "rsync -a extension/ \"safari-app/Pi-hole Allowlist/Pi-hole Allowlist Extension/Resources/\"",
+    "icons": "bash scripts/generate-icons.sh && npm run sync:safari"
+  },
+  "devDependencies": {
+    "vitest": "^3.0.5"
+  }
+}

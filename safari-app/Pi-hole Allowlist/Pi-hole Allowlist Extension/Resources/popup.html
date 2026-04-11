@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="nl">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Pi-hole Allowlist</title>
+    <link rel="stylesheet" href="popup.css" />
+  </head>
+  <body>
+    <main>
+      <p id="domain" class="domain muted">…</p>
+      <p id="status" class="status" aria-live="polite"></p>
+      <div class="row">
+        <button type="button" id="add" class="primary">Allowlisten</button>
+        <button type="button" id="remove" class="danger">
+          Van allowlist
+        </button>
+      </div>
+      <div class="row row-settings">
+        <button type="button" id="open-options" class="secondary stretch">
+          Instellingen
+        </button>
+      </div>
+    </main>
+    <script type="module" src="popup.js"></script>
+  </body>
+</html>

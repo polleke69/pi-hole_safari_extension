@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="nl">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Pi-hole Allowlist — Instellingen</title>
+    <link rel="stylesheet" href="options.css" />
+  </head>
+  <body>
+    <h1>Pi-hole Allowlist</h1>
+    <p class="lead">
+      Vul de basis-URL van je Pi-hole webinterface in (zonder pad, bv.
+      <code>https://pi.hole</code> of <code>http://192.168.1.10</code>).
+ </p>
+    <form id="form">
+      <label>
+        Pi-hole basis-URL
+        <input
+          id="baseUrl"
+          type="url"
+          inputmode="url"
+          autocomplete="off"
+          placeholder="https://pi.hole"
+          required
+        />
+      </label>
+      <label>
+        Wachtwoord of application password
+        <input
+          id="password"
+          type="password"
+          autocomplete="current-password"
+          placeholder="Leeg laten als je Pi-hole geen wachtwoord heeft"
+        />
+      </label>
+      <p class="hint">
+        Pi-hole v6 gebruikt sessies; sla een
+        <strong>application password</strong> aan (web UI → Settings) i.p.v. je
+        hoofdwachtwoord als je 2FA hebt.
+      </p>
+      <div class="row">
+        <button type="submit" class="primary">Opslaan</button>
+        <span id="saved" class="saved" aria-live="polite"></span>
+      </div>
+    </form>
+    <script type="module" src="options.js"></script>
+  </body>
+</html>
