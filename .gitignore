@@ -1,5 +1,5 @@
-node_modules/
 .DS_Store
+.cursor
+node_modules/
 **/xcuserdata/
 *.xcuserstate
-*.cursor
