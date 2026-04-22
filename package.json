@@ -4,6 +4,7 @@
   "type": "module",
   "scripts": {
     "test": "vitest run",
+    "build": "bash scripts/build.sh",
     "sync:safari": "rsync -a extension/ \"safari-app/Pi-hole Allowlist/Pi-hole Allowlist Extension/Resources/\"",
     "icons": "bash scripts/generate-icons.sh && npm run sync:safari"
   },

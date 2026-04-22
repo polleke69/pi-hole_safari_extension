@@ -11,9 +11,20 @@
 </head>
 <body>
     <img src="../Icon.png" width="128" height="128" alt="Pi-hole Allowlist Icon">
-    <p class="state-unknown">You can turn on Pi-hole Allowlist’s extension in Safari Extensions preferences.</p>
+    <p id="query-error" class="query-error" hidden></p>
+    <p class="state-unknown">Turn on Pi-hole Allowlist in Safari’s Extensions list. If status stays unknown, Safari has not registered the extension yet (common for new or unsigned builds)—follow the steps below, then use the button to open Settings.</p>
     <p class="state-on">Pi-hole Allowlist’s extension is currently on. You can turn it off in Safari Extensions preferences.</p>
     <p class="state-off">Pi-hole Allowlist’s extension is currently off. You can turn it on in Safari Extensions preferences.</p>
+    <section class="unsigned-hint" aria-label="Local development">
+        <h2 class="unsigned-hint-title">Extension not listed in Safari?</h2>
+        <p>Local / unsigned builds are ignored by Safari until you allow them (once per Safari session):</p>
+        <ol class="unsigned-steps">
+            <li>Install or run <strong>Pi-hole Allowlist.app</strong> (from Xcode: Product &gt; Run) at least once.</li>
+            <li>In Safari, open <strong>Settings &gt; Advanced</strong> and turn on <strong>“Show features for web developers”</strong> (or the older “Show Develop menu in menu bar”).</li>
+            <li>Then <strong>Settings &gt; Developer</strong> and check <strong>“Allow unsigned extensions”</strong>. This resets when you quit Safari.</li>
+            <li>Open <strong>Settings &gt; Extensions</strong>, find <strong>Pi-hole Allowlist</strong> in the list, and enable the checkbox.</li>
+        </ol>
+    </section>
     <button class="open-preferences">Quit and Open Safari Extensions Preferences…</button>
 </body>
 </html>

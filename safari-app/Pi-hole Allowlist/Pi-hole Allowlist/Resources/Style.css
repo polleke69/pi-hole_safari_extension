@@ -43,3 +43,35 @@ body.state-off :is(.state-on, .state-unknown) {
 button {
     font-size: 1em;
 }
+
+.query-error {
+    color: #c00;
+    max-width: 32em;
+}
+
+.unsigned-hint {
+    text-align: left;
+    max-width: 32em;
+    font-size: 0.9em;
+    line-height: 1.4;
+    padding: 0.75em 1em;
+    border: 1px solid color-mix(in srgb, CanvasText 15%, transparent);
+    border-radius: 8px;
+    background: color-mix(in srgb, CanvasText 4%, transparent);
+}
+
+.unsigned-hint-title {
+    font: inherit;
+    font-weight: 600;
+    font-size: 0.95em;
+    margin: 0 0 0.5em 0;
+}
+
+.unsigned-steps {
+    margin: 0.4em 0 0 0;
+    padding-left: 1.2em;
+}
+
+.unsigned-steps li {
+    margin: 0.25em 0;
+}

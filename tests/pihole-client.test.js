@@ -6,6 +6,7 @@ import {
   addAllowExactDomain,
   removeAllowExactDomain,
   isDomainAlreadyOnAllowlistError,
+  fetchExactAllowStatus,
 } from "../extension/lib/pihole-client.js";
 
 describe("extractHostname", () => {
@@ -240,5 +241,77 @@ describe("removeAllowExactDomain", () => {
         fetchImpl: fetchMock,
       }),
     ).rejects.toThrow(/database_error|500/);
+  });
+});
+
+describe("fetchExactAllowStatus", () => {
+  const fetchMock = vi.fn();
+
+  beforeEach(() => {
+    global.fetch = fetchMock;
+  });
+
+  afterEach(() => {
+    vi.restoreAllMocks();
+  });
+
+  it("GETs /api/domains/allow/exact/{domain} with sid", async () => {
+    fetchMock.mockResolvedValueOnce({
+      ok: true,
+      status: 200,
+      json: async () => ({
+        domains: [
+          { domain: "example.com", type: "allow", kind: "exact", enabled: true },
+        ],
+      }),
+    });
+
+    const out = await fetchExactAllowStatus(
+      "https://pi.hole",
+      "sid1",
+      "example.com",
+      { fetchImpl: fetchMock },
+    );
+    expect(out).toEqual({ found: true, enabled: true });
+    expect(fetchMock).toHaveBeenCalledWith(
+      "https://pi.hole/api/domains/allow/exact/example.com",
+      expect.objectContaining({
+        method: "GET",
+        headers: expect.objectContaining({
+          Accept: "application/json",
+          "X-FTL-SID": "sid1",
+        }),
+      }),
+    );
+  });
+
+  it("returns not found for empty list", async () => {
+    fetchMock.mockResolvedValueOnce({
+      ok: true,
+      status: 200,
+      json: async () => ({ domains: [] }),
+    });
+
+    const out = await fetchExactAllowStatus(
+      "https://pi.hole",
+      "sid1",
+      "missing.com",
+    );
+    expect(out).toEqual({ found: false, enabled: false });
+  });
+
+  it("treats disabled row as not enabled for DNS", async () => {
+    fetchMock.mockResolvedValueOnce({
+      ok: true,
+      status: 200,
+      json: async () => ({
+        domains: [
+          { domain: "x.com", type: "allow", kind: "exact", enabled: false },
+        ],
+      }),
+    });
+
+    const out = await fetchExactAllowStatus("https://pi.hole", "sid1", "x.com");
+    expect(out).toEqual({ found: true, enabled: false });
   });
 });

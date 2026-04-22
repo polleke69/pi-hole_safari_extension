@@ -1,4 +1,16 @@
+function showQueryError(message) {
+    const p = document.getElementById("query-error");
+    if (p) {
+        p.textContent = "Could not read extension state: " + message;
+        p.removeAttribute("hidden");
+    }
+}
+
 function show(enabled, useSettingsInsteadOfPreferences) {
+    const qe = document.getElementById("query-error");
+    if (qe) {
+        qe.setAttribute("hidden", "hidden");
+    }
     if (useSettingsInsteadOfPreferences) {
         document.getElementsByClassName('state-on')[0].innerText = "Pi-hole Allowlist’s extension is currently on. You can turn it off in the Extensions section of Safari Settings.";
         document.getElementsByClassName('state-off')[0].innerText = "Pi-hole Allowlist’s extension is currently off. You can turn it on in the Extensions section of Safari Settings.";

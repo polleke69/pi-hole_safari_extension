@@ -166,3 +166,46 @@ export async function removeAllowExactDomain(
 
   return { removed: true, notFound: false };
 }
+
+/**
+ * Read exact-allowlist state for a domain (GET /api/domains/allow/exact/{domain}).
+ * @returns {Promise<{ found: boolean, enabled: boolean }>}
+ */
+export async function fetchExactAllowStatus(
+  baseUrl,
+  sid,
+  domain,
+  options = {},
+) {
+  const { fetchImpl = fetch } = options;
+  const root = normalizeBaseUrl(baseUrl);
+  const path = `${root}/api/domains/allow/exact/${encodeURIComponent(domain)}`;
+  const headers = {
+    Accept: "application/json",
+  };
+  if (sid) {
+    headers["X-FTL-SID"] = sid;
+  }
+
+  const res = await fetchImpl(path, { method: "GET", headers });
+  const data = await res.json().catch(() => ({}));
+
+  if (!res.ok) {
+    const msg =
+      data?.error?.message || `Pi-hole read allowlist failed (${res.status})`;
+    throw new Error(msg);
+  }
+
+  const list = Array.isArray(data?.domains) ? data.domains : [];
+  const want = String(domain).toLowerCase();
+  const row = list.find(
+    (d) =>
+      d && typeof d.domain === "string" && d.domain.toLowerCase() === want,
+  );
+
+  if (!row) {
+    return { found: false, enabled: false };
+  }
+  const enabled = row.enabled !== false;
+  return { found: true, enabled };
+}

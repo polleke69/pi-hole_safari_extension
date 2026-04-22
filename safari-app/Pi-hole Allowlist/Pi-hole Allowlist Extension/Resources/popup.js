@@ -5,6 +5,7 @@ import {
   addAllowExactDomain,
   removeAllowExactDomain,
   isDomainAlreadyOnAllowlistError,
+  fetchExactAllowStatus,
 } from "./lib/pihole-client.js";
 
 const domainEl = document.getElementById("domain");
@@ -90,7 +91,34 @@ async function main() {
       if (result.errors?.length) {
         const first = result.errors[0];
         if (isDomainAlreadyOnAllowlistError(first)) {
-          setStatus(`Stond al op de allowlist: ${hostname}`, false);
+          try {
+            const st = await fetchExactAllowStatus(
+              baseUrl,
+              sid,
+              hostname,
+            );
+            if (st.found && st.enabled) {
+              setStatus(
+                `Stond al op de allowlist (geverifieerd): ${hostname}`,
+                false,
+              );
+            } else if (st.found && !st.enabled) {
+              setStatus(
+                `Regel op allowlist, maar uitgeschakeld in Pi-hole: ${hostname}`,
+                true,
+              );
+            } else {
+              setStatus(
+                `PI-hole meldt duplicate, maar ${hostname} is niet in de lijst terug te lezen. Controleer de web-UI.`,
+                true,
+              );
+            }
+          } catch (verifyErr) {
+            setStatus(
+              `Stond al op de allowlist: ${hostname} (verificatie: ${verifyErr?.message || String(verifyErr)})`,
+              false,
+            );
+          }
           return;
         }
         const hint = first?.error || first?.message || "";
@@ -106,7 +134,27 @@ async function main() {
         return;
       }
 
-      setStatus(`Toegevoegd: ${hostname}`, false);
+      try {
+        const st = await fetchExactAllowStatus(baseUrl, sid, hostname);
+        if (st.found && st.enabled) {
+          setStatus(`Toegevoegd en geverifieerd op de allowlist: ${hostname}`, false);
+        } else if (st.found && !st.enabled) {
+          setStatus(
+            `Toegevoegd, maar de regel is uitgeschakeld in Pi-hole: ${hostname}`,
+            true,
+          );
+        } else {
+          setStatus(
+            `Toegevoegd, maar ${hostname} staat na controle niet op de allowlist. Controleer de web-UI.`,
+            true,
+          );
+        }
+      } catch (verifyErr) {
+        setStatus(
+          `Toegevoegd: ${hostname} (lees-controle: ${verifyErr?.message || String(verifyErr)})`,
+          false,
+        );
+      }
     } catch (e) {
       setStatus(e?.message || String(e), true);
     } finally {
