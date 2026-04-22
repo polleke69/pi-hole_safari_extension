@@ -1,5 +1,6 @@
 .DS_Store
 .cursor
+resume.sh
 node_modules/
 build/
 **/xcuserdata/
